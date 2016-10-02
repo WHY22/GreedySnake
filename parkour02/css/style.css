@@ -35,8 +35,8 @@
 	left:270px;
 	top:400px;
 	/*background: url(../img/rundog.gif) 0px 20px;*/
-	/*background: url(../img/runman.gif);
-	background-size: 100% 140%;*/
+	background: url(../img/runman.gif);
+	background-size: 100% 140%;
 }
 #board{
 	width:700px;
