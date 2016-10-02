@@ -1,0 +1,119 @@
+$(function(){
+	var _left = 0;
+	
+	/*var tempSpeedT;*/
+	var speedT = -20;
+	var speedL = 5;
+	var timer = setInterval(run,20);
+	//run();
+	function run(personDom,boardDom){
+		
+		speedT++;
+		tempSpeedT = speedT;
+		//person的top,left,width,height
+		//人的top,left和宽,高
+		var _top = $("#person").offset().top;
+		var _left = $("#person").offset().left;
+		var _width = $("#person").width();
+		var _height = $("#person").height();
+		
+		//board的top,left,width,height
+		//板1的各值
+		var _topB = $("#board").offset().top;
+		var _leftB = $("#board").offset().left;
+		var _widthB = $("#board").width();
+		var _heightB = $("#board").height();
+		
+		
+		//board的top,left,width,height
+		//板2的各值
+		var _topB2 = $("#board2").offset().top;
+		var _leftB2 = $("#board2").offset().left;
+		var _widthB2 = $("#board2").width();
+		var _heightB2 = $("#board2").height();
+		
+		
+		
+		
+		//如果person在board上,speedT为0
+		if(_left+_width >= _leftB && _left <= _leftB + _widthB){
+			//console.log("zuoyou");
+			if(_top + _height == _topB){
+			//	console.log("shangxia");
+				
+				speedT = 0;
+				
+			}
+		}
+		
+		if(_left+_width >= _leftB2 && _left <= _leftB2 + _widthB2){
+			//console.log("zuoyou");
+			if(_top + _height == _topB2){
+			//	console.log("shangxia");
+				
+				speedT = 0;
+				console.log(_left - _leftB - _widthB);
+				console.log(_top + _height - _topB);
+			}
+		}
+		
+		//person的left增加
+		$("#board").css({"left":_leftB-speedL+"px"});
+		$("#board2").css({"left":_leftB2-speedL+"px"});
+		$("#person").css({"top":_top+speedT+"px"});
+		
+		//console.log(_leftB);
+		if(_leftB <= -850){
+			$("#board").css({"left":_leftB2+_widthB2 + 150 +"px"});
+		}
+		if(_leftB2 <= - 750){
+			$("#board2").css({"left":_leftB+_widthB+150+"px"});
+		}
+		
+		if(_topB < _top){
+			clearInterval(timer);
+			/*if(speedT > 20){
+				alert("叫你不听话");
+				return;
+			}*/
+			console.log(speedT);
+			alert("You die");
+		}
+		
+	}
+	
+	//当空格被按下时
+	(function pressSpace(){
+		
+			//当空格被按下,speedT为-20
+			$(document).get(0).onkeydown = function(ev){
+				
+				clearInterval(timer);
+				
+				var _top = $("#person").offset().top;
+				var _height = $("#person").height();
+				var _topB = $("#board").offset().top;
+				
+				
+				if(ev.keyCode == 32){
+					speedT = -20;
+					
+					$("#person").css({"top":_top+speedT+"px"});
+				}
+				timer = setInterval(run,20);
+				
+				/*if(_top+_height != _topB){
+					$(document).get(0).onkeydown = function(ev){
+						speedT = tempSpeedT;
+					}
+				} */
+				
+				
+			}
+			
+			
+		
+		
+	})();
+	
+});

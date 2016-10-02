@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#box{
+	width: 700px;
+	height: 800px;
+	overflow: hidden;
+	position:relative;
+	left:0;
+	top: 0;
+	
+	/*box-sizing: border-box;
+	border: 1px aquamarine solid;*/
+}
+#testborder{
+	width: 700px;
+	height: 800px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 5px aqua solid;
+	text-align: center;
+	font-size: 20px;
+	color: #82BEFA;
+	padding-top: 40px;
+}
+
+#person{
+	width: 100px;
+	height: 100px;
+	background: aqua;
+	position:absolute;
+	left:270px;
+	top:400px;
+	/*background: url(../img/rundog.gif) 0px 20px;*/
+	background: url(../img/runman.gif);
+	background-size: 100% 140%;
+}
+#board{
+	width:700px;
+	height:10px;
+	position:absolute;
+	left:0px;
+	top:500px;
+	background:black;
+}  
+
+#board2{
+	width:600px;
+	height:10px;
+	position:absolute;
+	left:850px;
+	top:500px;
+	background:black;
+}
