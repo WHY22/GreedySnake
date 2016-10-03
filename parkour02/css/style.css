@@ -10,7 +10,8 @@
 	position:relative;
 	left:0;
 	top: 0;
-	
+	background: url(../img/bg.png) no-repeat;
+	background-size: 100% 100%;
 	/*box-sizing: border-box;
 	border: 1px aquamarine solid;*/
 }
@@ -37,6 +38,7 @@
 	/*background: url(../img/rundog.gif) 0px 20px;*/
 	background: url(../img/runman.gif);
 	background-size: 100% 140%;
+	opacity: 0.8;
 }
 #board{
 	width:700px;
