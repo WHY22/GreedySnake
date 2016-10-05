@@ -15,7 +15,7 @@
 	/*box-sizing: border-box;
 	border: 1px aquamarine solid;*/
 }
-#testborder{
+/*#testborder{
 	width: 700px;
 	height: 800px;
 	position: absolute;
@@ -26,6 +26,26 @@
 	font-size: 20px;
 	color: #82BEFA;
 	padding-top: 40px;
+}*/
+
+#score{
+	position: absolute;
+	left: 20px;
+	top: 50px;
+	overflow: hidden;
+}
+#score img{
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+#score span{
+	line-height: 40px;
+	color: #6985A7;
+	font-size: 40px;
+	float: left;
+	height: 40px;
+	margin-left: 20px;
 }
 
 #person{
@@ -36,9 +56,17 @@
 	left:270px;
 	top:400px;
 	/*background: url(../img/rundog.gif) 0px 20px;*/
-	background: url(../img/runman.gif);
-	background-size: 100% 140%;
-	opacity: 0.8;
+	background: url(../img/runman.gif) no-repeat -40px -40px;
+	background-size: 180% 180%;
+	z-index: 5;
+	opacity: 0.9;
+}
+h1 img{
+	position: absolute;
+	top: -50px;
+	left: 0px;
+	width: 40px;
+	height: 40px;
 }
 #board{
 	width:700px;
@@ -46,8 +74,8 @@
 	position:absolute;
 	left:0px;
 	top:500px;
-	background:black;
-	opacity: 0.2;
+	background:rgba(0,0,0,0.4);
+	
 }  
 
 #board2{
@@ -57,5 +85,5 @@
 	left:850px;
 	top:500px;
 	background:#82BEFA;
-	opacity: 0.2;
+	
 }
