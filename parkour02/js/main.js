@@ -138,6 +138,7 @@ $(function(){
 		//console.log(resultTop + ": topB " + _topB + ": " + _topB2);
 		if(resultTop +15 < _top + _height){
 			clearInterval(timer);
+			clearInterval(timer2);
 			/*if(speedT > 20){
 				alert("叫你不听话");
 				return;
