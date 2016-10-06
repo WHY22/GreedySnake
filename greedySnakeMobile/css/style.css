@@ -1,0 +1,53 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#box{
+	width: 500px;
+	height: 1000px;
+	background: #000;
+	margin: 50px auto;
+	overflow: hidden;
+}
+
+#box p{
+	width: 20px;
+	height: 20px;
+	background: #C6C2E4;
+	float: left;
+}
+
+#control{
+	width: 500px;
+	margin: 50px auto;
+}
+#control a{
+	display: inline-block;
+	position: absolute;
+	border: 1px aqua solid;
+	width: 40px;
+	height: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+#c-pause{
+	left: 188px;
+	top: 1100px;
+	width: 50px;
+}
+#c-left{
+	left: 270px;
+	top: 1100px;
+}
+#c-top{
+	left: 330px;
+	top: 1070px;
+}
+#c-bottom{
+	left: 330px;
+	top: 1100px;
+}
+#c-right{
+	left: 390px;
+	top: 1100px;
+}
