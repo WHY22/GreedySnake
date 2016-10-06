@@ -6,7 +6,7 @@
 	width: 500px;
 	height: 1000px;
 	background: #000;
-	margin: 50px auto;
+	margin: 20px auto;
 	overflow: hidden;
 }
 
@@ -42,7 +42,7 @@
 }
 #c-top{
 	left: 400px;
-	top: 1060px;
+	top: 1040px;
 }
 #c-bottom{
 	left: 400px;

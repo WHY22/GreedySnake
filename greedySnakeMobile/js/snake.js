@@ -81,15 +81,17 @@ $(function(){
 		//keydown结束
 		//手机触碰 暂停按钮  控制暂停
 		$("#c-pause").on("touchstart",function(){
-			if(!isPause){
+			if(!isPause && $("#c-pause").html() == "暂停"){
 				isPause = true;
 				clearInterval(timer);
 				$(this).html("继续");
-			} else if(isPause && checkResult()){
+			} else if(isPause && checkResult() && $("#c-pause").html() == "继续"){
 				//按下空格键，当isPause为true时，打开定时器,继续游戏
 				isPause = false;
 				timer = setInterval(run,100);
 				$(this).html("暂停");
+			} else if($("#c-pause").html() == "重玩"){
+				location.href = "index.html";
 			}
 			console.log("touch");
 		});
@@ -146,6 +148,7 @@ $(function(){
 			$("#snakeHead").css({opacity:0});
 			clearInterval(timer);
 			alert("You die");
+			$("#c-pause").html("重玩");
 			return false;
 		}
 		
@@ -160,6 +163,7 @@ $(function(){
 			if(_bodyTop == _snakeTop && _bodyLeft == _snakeLeft){
 				clearInterval(timer);
 				alert("You die");
+				$("#c-pause").html("重玩");
 				return false;
 			}
 			
