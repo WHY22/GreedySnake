@@ -25,29 +25,30 @@
 	display: inline-block;
 	position: absolute;
 	border: 1px aqua solid;
-	width: 40px;
-	height: 20px;
-	font-size: 20px;
+	width: 80px;
+	height: 40px;
+	font-size: 40px;
 	text-align: center;
+	line-height: 40px;
 }
 #c-pause{
-	left: 188px;
-	top: 1100px;
-	width: 50px;
+	left: 180px;
+	top: 1110px;
+	width: 100px;
 }
 #c-left{
-	left: 270px;
-	top: 1100px;
+	left: 300px;
+	top: 1110px;
 }
 #c-top{
-	left: 330px;
-	top: 1070px;
+	left: 400px;
+	top: 1060px;
 }
 #c-bottom{
-	left: 330px;
-	top: 1100px;
+	left: 400px;
+	top: 1110px;
 }
 #c-right{
-	left: 390px;
-	top: 1100px;
+	left: 500px;
+	top: 1110px;
 }

@@ -76,54 +76,56 @@ $(function(){
 				isPause = false;
 				timer = setInterval(run,100);
 			}
-			//手机触碰 暂停按钮  控制暂停
-			$("#c-pause").on("touchstart",function(){
-				if(!isPause){
-					isPause = true;
-					clearInterval(timer);
-					$(this).html("继续");
-				} else if(isPause && checkResult()){
-					//按下空格键，当isPause为true时，打开定时器,继续游戏
-					isPause = false;
-					timer = setInterval(run,100);
-					$(this).html("暂停");
-				}
-				console.log("touch");
-			});
-			//按下"↓",速度为向下20(所说的速度都为snake头部速度)
-			$("#c-bottom").on("touchstart",function(){
-				
-				if(speedT != -20){
-					//按下"↓",速度为向下20(所说的速度都为snake头部速度)
-					speedL = 0;
-					speedT = 20;
-					console.log(speedT);
-				}
-			});
-			//按下"→",速度为向右20
-			$("#c-right").on("touchstart",function(){
-				if(speedL != -20){
-					//按下"→",速度为向右20
-					speedL = 20;
-					speedT = 0;
-				}	
-			});
-			//按下"↑",速度为向上20
-			$("#c-top").on("touchstart",function(){
-				 if(speedT != 20){
-					//按下"↑",速度为向上20
-					speedL = 0;
-					speedT = -20;
-				} 
-			});
-			//按下"←",速度为向左20
-			$("#c-left").on("touchstart",function(){
-				 if(speedL != 20){
-					//按下"←",速度为向左20
-					speedL = -20;
-					speedT = 0;
-				}
-			});
+			
+		});
+		//keydown结束
+		//手机触碰 暂停按钮  控制暂停
+		$("#c-pause").on("touchstart",function(){
+			if(!isPause){
+				isPause = true;
+				clearInterval(timer);
+				$(this).html("继续");
+			} else if(isPause && checkResult()){
+				//按下空格键，当isPause为true时，打开定时器,继续游戏
+				isPause = false;
+				timer = setInterval(run,100);
+				$(this).html("暂停");
+			}
+			console.log("touch");
+		});
+		//按下"↓",速度为向下20(所说的速度都为snake头部速度)
+		$("#c-bottom").on("touchstart",function(){
+			
+			if(speedT != -20){
+				//按下"↓",速度为向下20(所说的速度都为snake头部速度)
+				speedL = 0;
+				speedT = 20;
+				console.log(speedT);
+			}
+		});
+		//按下"→",速度为向右20
+		$("#c-right").on("touchstart",function(){
+			if(speedL != -20){
+				//按下"→",速度为向右20
+				speedL = 20;
+				speedT = 0;
+			}	
+		});
+		//按下"↑",速度为向上20
+		$("#c-top").on("touchstart",function(){
+			 if(speedT != 20){
+				//按下"↑",速度为向上20
+				speedL = 0;
+				speedT = -20;
+			} 
+		});
+		//按下"←",速度为向左20
+		$("#c-left").on("touchstart",function(){
+			 if(speedL != 20){
+				//按下"←",速度为向左20
+				speedL = -20;
+				speedT = 0;
+			}
 		});
 		
 	}
