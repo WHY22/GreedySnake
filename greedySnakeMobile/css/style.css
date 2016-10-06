@@ -4,7 +4,7 @@
 }
 #box{
 	width: 500px;
-	height: 1000px;
+	height: 900px;
 	background: #000;
 	margin: 20px auto;
 	overflow: hidden;
@@ -25,30 +25,30 @@
 	display: inline-block;
 	position: absolute;
 	border: 1px aqua solid;
-	width: 80px;
-	height: 40px;
+	width: 120px;
+	height: 50px;
 	font-size: 40px;
 	text-align: center;
 	line-height: 40px;
 }
 #c-pause{
-	left: 180px;
+	left: 130px;
 	top: 1110px;
 	width: 100px;
 }
 #c-left{
-	left: 300px;
+	left: 280px;
 	top: 1110px;
 }
 #c-top{
-	left: 400px;
+	left: 420px;
 	top: 1040px;
 }
 #c-bottom{
-	left: 400px;
+	left: 420px;
 	top: 1110px;
 }
 #c-right{
-	left: 500px;
+	left: 560px;
 	top: 1110px;
 }
