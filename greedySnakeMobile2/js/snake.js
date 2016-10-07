@@ -231,7 +231,14 @@ $(function(){
 			createFood();
 			foodIndex++;
 			$("#score").html("得分: "+foodIndex);
-			if(foodIndex >= 2 && foodIndex < 5){
+			runSpeed -= 2;
+			 clearInterval(timer);
+			 timer = setInterval(run,runSpeed);
+			 if(runSpeed == 20){
+			 	clearInterval(timer);
+			 	alert("You win");
+			 }
+			/*if(foodIndex >= 2 && foodIndex < 5){
 				clearInterval(timer);
 				runSpeed = 75;
 				timer = setInterval(run,runSpeed);
@@ -243,7 +250,7 @@ $(function(){
 				clearInterval(timer);
 				runSpeed = 50;
 				timer = setInterval(run,runSpeed);
-			} 
+			} */
 		}
 		
 	}
