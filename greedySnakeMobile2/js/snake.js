@@ -236,7 +236,7 @@ $(function(){
 			 timer = setInterval(run,runSpeed);
 			 if(runSpeed == 20){
 			 	clearInterval(timer);
-			 	alert("You win");
+			 	alert("You win,score: "+foodIndex);
 			 }
 			/*if(foodIndex >= 2 && foodIndex < 5){
 				clearInterval(timer);
