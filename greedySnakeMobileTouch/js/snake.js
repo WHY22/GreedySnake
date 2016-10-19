@@ -152,11 +152,11 @@ $(function(){
 		var startX = ev.clientX;
 		var startY = ev.clientY;
 		
-		$("box").on("touchmove",function(ev){
+		$("#box").on("touchmove",function(ev){
 			ev = ev.originalEvent.changedTouches[0];
 			
 		});
-		$("box").on("touchend",function(ev){
+		$("#box").on("touchend",function(ev){
 			ev = ev.originalEvent.changedTouches[0];
 			var endX = ev.clientX;
 			var endY = ev.clientY;
@@ -194,8 +194,8 @@ $(function(){
 				}
 			}
 			
-			$("box").off("touchstart");
-			$("box").off("touchmove");
+			$("#box").off("touchstart");
+			$("#box").off("touchmove");
 			return false;
 		});
 	});
