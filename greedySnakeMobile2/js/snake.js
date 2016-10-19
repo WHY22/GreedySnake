@@ -26,6 +26,18 @@ $(function(){
 	$snake.each(function(){
 		$(this).css({position:"absolute",margin:0});	
 	});
+	
+	var $snakeStart = $snake;
+	var posArrLeft = [];
+	var posArrTop = [];
+	for(var i = 0;i < $snakeStart.length;i++){
+		//console.log($snakeStart[i].style.left);
+		posArrLeft.push($snakeStart[i].style.left);
+		posArrTop.push($snakeStart[i].style.top);
+	}
+	console.log(posArrLeft);
+	
+	
 	//初始的left速度和top速度
 	var speedL = 20;
 	var speedT = 0;
@@ -97,7 +109,25 @@ $(function(){
 				timer = setInterval(run,runSpeed);
 				$(this).html("暂停");
 			} else if($("#c-pause").html() == "重玩"){
-				location.href = "index.html";
+				$("#box").empty().append($snakeStart);
+				
+				for(var i = 0;i < $snakeStart.length;i++){
+					//console.log($snakeStart[i].style.left);
+					//console.log(posArrLeft[i]);
+					clearInterval(timer);
+					$snakeStart[i].style.left=posArrLeft[i];
+					$snakeStart[i].style.top=posArrTop[i];
+					speedL = 20;
+					speedT = 0;
+					$("#food").remove();
+					createFood();
+					foodIndex = 0;
+					runSpeed = 100;
+					$("#score").html("得分: "+foodIndex);
+					timer = setInterval(run,runSpeed);
+					$(this).html("暂停");
+				}
+				//location.href = "index.html";
 			}
 			console.log("touch");
 		});
